@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="search.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://spoonacular.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://spoonacular.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <form>
+        <input type="button" value="Back To Main Page" onclick="history.back()">
+    </form>
+    <!----------------------- FOOD SEARCHER -------------------------------->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <input id="search" style="font-size: 20px;" placeholder="What Food Are You Looking For? (e.g Pasta)">
+    <button class="searchButton" onclick="getrecepe(document.getElementById('search').value)">Search</button>
+    <div id="output"></div>
+    <a href="" id="sourceLink"></a>
+
+
+    <!----------------------- INGREDIENT/MEAL PRICING ------------------------->
+    <div id="app">
+        <p>Break Down Prices of Ingredients</p>
+
+        <h3>Ingredients</h3>
+        <textarea v-model="ingredients" name="ingredients" style="height:150px;width:calc(100% - 20px);padding:10px"
+            placeholder="One ingredient per line (e.g &quot;200 grams of cucumber&quot;)"></textarea>
+
+        <h3>Number of Servings</h3>
+        <input name="servings" type="number" style="width:45px;padding:10px;" v-model="servings" />
+
+        <h3>View Style</h3>
+        <div>
+            <input id="spoonacular-grid" name="view" type="radio" checked="" value="1" v-model="viewStyle">
+            <label for="spoonacular-grid" onclick="">Compact</label>
+            <input id="spoonacular-list" name="view" type="radio" value="2" v-model="viewStyle">
+            <label for="spoonacular-list" onclick="">Full</label>
+            <span class="slide-button"></span>
+        </div>
+
+        <div class="searchbutton" @click="previewPriceWidget">View Price Visualizer</div>
+
+        <iframe id="previewWidget"></iframe>
+        </template>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>

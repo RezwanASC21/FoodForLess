@@ -1,0 +1,107 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+    text-align: center;
+    color: honeydew;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-size: x-large;
+}
+
+#search {
+    width: 30%;
+    height: 30px;
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border-color: white;
+}
+
+.searchButton {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color:gray;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    display: grid;
+    margin: auto;
+}
+
+#sourceLink {
+    display: block;
+    text-align: center;
+}
+
+/* ---------------INGREDIENT/MEAL PRICING----------------- */
+#app {
+    font-family: 'Indie Flower', cursive;
+    background-color: #fff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+    border-radius: 22px;
+}
+
+iframe {
+    width: 100%;
+    height: 610px;
+    border: none;
+    margin-top: 20px;
+}
+
+.foodbreakdown {
+    font-size: 22px;
+    display: inline;
+} 
+
+
+.searchbutton:hover {
+    background-color: rgb(241, 255, 241);
+}
+
+.searchbutton {
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
